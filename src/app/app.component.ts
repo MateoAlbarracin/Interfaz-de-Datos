@@ -33,12 +33,12 @@ export class AppComponent {
     this.model2.metodo = this.data[i].metodo;
     this.model2.seguridad = this.data[i].seguridad;
     this.model2.tabla = this.data[i].tabla;
-    this.myValue = 0
+    this.myValue = i
   };
 
   updateData():void{
     let i = this.myValue;
-    for(let j = 0; j < this.data.length; j++){
+    for(let j = i; j < this.data.length; j++){
       if(i == j){
         this.data[i] = this.model2;
         this.model2 = {}
